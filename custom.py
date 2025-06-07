@@ -37,7 +37,7 @@ class RemoteTarget(gdb.Command):
         if self.status:
             gdb.write(f"Error: Remote Target already running!\n", gdb.STDERR)
             return
-        elif len(args) is 2:
+        elif len(args) == 2:
             self.host_target = f"{args[0]}:{args[1]}"
 
         try:
