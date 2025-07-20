@@ -4,9 +4,11 @@
 $ docker build -t my-gdb .
 $ docker run -it --rm \
   --pid=host \
+  --network=host \
   --cap-add=SYS_PTRACE \
   --security-opt seccomp=unconfined \
-  -v /proc:/host_proc \
-  -v /:/mnt/host \
+  --privileged \
   my-gdb \
-  bash
+  gefk
+OR
+$ docker-compose up --build

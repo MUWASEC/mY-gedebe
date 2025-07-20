@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  gdb:
+    build:
+      context: .
+    image: my-gdb # change this in needed
+    # give us an interactive shell
+    working_dir: /
+    command: bash
+    # allow host debug
+    pid: host
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    volumes:
+      - /proc:/host_proc
+      - /:/mnt/host
+    stdin_open: true
+    tty: true
+    # eof
