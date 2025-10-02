@@ -1,4 +1,4 @@
-> hmm idk, this is just my personal project
+> hmm idk, this is just my personal ̶p̶r̶o̶j̶e̶c̶t̶  note
 
 > how2run ?
 $ docker build -t my-gdb .
