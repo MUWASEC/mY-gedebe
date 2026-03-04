@@ -17,7 +17,7 @@ git clone https://github.com/hugsy/gef
 git clone https://github.com/bata24/gef gef-kernel
 
 ### create shortcut & gdbinit
-sudo cp "$REPO_DIR/bin/*" /usr/local/bin/
+sudo cp "$REPO_DIR"/bin/* /usr/local/bin/
 cp "$REPO_DIR/gdbinit" ~/.gdbinit
 cp -r "$REPO_DIR/mygdb/" "$GDB_DIR"
 popd
